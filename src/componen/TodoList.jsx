@@ -86,14 +86,14 @@ function TodoListApps(params) {
           </Col>
         </Row>
 
-        <div className="mt-5 d-flex justify-content-center">
-          <Button className="me-3 rounded-4" variant={filter === "SHOW_ALL" ? "primary" : "secondary"} onClick={handleFilterAll}>
+        <div className="mt-5 d-flex flex-wrap justify-content-center">
+          <Button className="me-3 mb-3 rounded-4" variant={filter === "SHOW_ALL" ? "primary" : "secondary"} onClick={handleFilterAll}>
             All
           </Button>
-          <Button className="me-3 rounded-4" variant={filter === "SHOW_ACTIVE" ? "primary" : "secondary"} onClick={handleFilterActive}>
+          <Button className="me-3 mb-3 rounded-4" variant={filter === "SHOW_ACTIVE" ? "primary" : "secondary"} onClick={handleFilterActive}>
             Active
           </Button>
-          <Button className="me-3 rounded-4" variant={filter === "SHOW_COMPLETED" ? "primary" : "secondary"} onClick={handleFilterCompleted}>
+          <Button className="me-3 mb-3 rounded-4" variant={filter === "SHOW_COMPLETED" ? "primary" : "secondary"} onClick={handleFilterCompleted}>
             Completed
           </Button>
         </div>
