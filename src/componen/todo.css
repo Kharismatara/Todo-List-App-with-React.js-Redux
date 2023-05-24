@@ -1,0 +1,22 @@
+.todo-item {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container {
+  display: flex;
+  align-items: center;
+}
+
+.checkbox-container input {
+  margin-right: 50px; /* Menambahkan ruang di antara checkbox dan teks */
+  transform: scale(3); /* Memperbesar ukuran checkbox */
+}
+
+.todo-text {
+  flex-grow: 1; /* Memperpanjang div untuk menampung teks */
+}
+
+.icon {
+  font-size: 24px; /* Atur ukuran ikon */
+}

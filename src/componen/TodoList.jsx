@@ -74,10 +74,10 @@ function TodoListApps(params) {
   return (
     <>
       <div className="fs-2 text-center mt-5 fw-bold mb-5 "> What's the plan for today</div>
-      <Container>
+      <Container className=" w-50 border-5 ">
         <Row className="justify-content-center">
-          <Col sm={8} md={6} className="d-flex justify-content-center">
-            <Form.Control type="text" value={newTodo} onChange={handleInputChange} placeholder="Enter item" />
+          <Col sm={8} md={6} className="d-flex justify-content-center ">
+            <Form.Control type="text" value={newTodo} onChange={handleInputChange} placeholder="What Todo..." />
             <div className="mx-2">
               <Button variant="primary" onClick={handleAddTodo}>
                 Add
@@ -110,23 +110,27 @@ function TodoListApps(params) {
               }
             })
             .map((todo) => (
-              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 todo-item ps-5">
-                <input type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
-                {editTodoId === todo.id ? (
-                  <div className="d-flex align-items-center">
-                    <input type="text" value={editTodoText} onChange={handleEditInputChange} />
-                    <Button variant="primary" onClick={handleSaveEdit}>
-                      Save
-                    </Button>
+              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 todo-item">
+                <div className="checkbox-container">
+                  <input type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
+                  <div className="todo-text">
+                    {editTodoId === todo.id ? (
+                      <div className="d-flex align-items-center ">
+                        <input type="text" value={editTodoText} onChange={handleEditInputChange} />
+                        <Button variant="primary" onClick={handleSaveEdit}>
+                          Save
+                        </Button>
+                      </div>
+                    ) : (
+                      <div className="d-flex align-items-center ">
+                        <span>{todo.text}</span>
+                        <Button variant="link" onClick={() => handleEditTodo(todo)}>
+                          <PencilSquare className="icon todo-text" /> {/* Ikon Edit */}
+                        </Button>
+                      </div>
+                    )}
                   </div>
-                ) : (
-                  <div className="d-flex align-items-center todo-text">
-                    <span>{todo.text}</span>
-                    <Button variant="link" onClick={() => handleEditTodo(todo)}>
-                      <PencilSquare className="icon" /> {/* Ikon Edit */}
-                    </Button>
-                  </div>
-                )}
+                </div>
                 <Button className="todo-text" variant="link" onClick={() => handleDeleteTodo(todo.id)}>
                   <Trash className="icon" /> {/* Ikon Delete */}
                 </Button>
