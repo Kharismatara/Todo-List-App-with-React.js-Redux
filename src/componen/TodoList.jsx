@@ -77,7 +77,7 @@ function TodoListApps(params) {
       <Container className=" w-50 border-5  mt-5">
         <Row className="justify-content-center">
           <Col sm={8} md={6} className="d-flex justify-content-center ">
-            <Form.Control type="text" value={newTodo} onChange={handleInputChange} placeholder="Enter item" />
+            <Form.Control type="text" value={newTodo} onChange={handleInputChange} placeholder="Whaat Todo..." />
             <div className="mx-2">
               <Button variant="primary" onClick={handleAddTodo}>
                 Add
