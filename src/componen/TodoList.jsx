@@ -110,7 +110,7 @@ function TodoListApps(params) {
               }
             })
             .map((todo) => (
-              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-50 mx-sm-auto flex-wrap">
+              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-50 mx-auto">
                 <div className="d-flex align-items-center flex-grow-1">
                   <input className="inputchek me-2" type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
 
@@ -127,8 +127,8 @@ function TodoListApps(params) {
                     </div>
                   )}
                 </div>
-                <div className="ms-auto d-flex buttonicons ">
-                  <Button variant="link" onClick={() => handleEditTodo(todo)} className="me-2">
+                <div className="ms-auto">
+                  <Button variant="link" onClick={() => handleEditTodo(todo)}>
                     <PencilSquare size={30} />
                   </Button>
                   <Button variant="link" onClick={() => handleDeleteTodo(todo.id)}>
