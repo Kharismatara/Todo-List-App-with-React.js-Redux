@@ -110,20 +110,20 @@ function TodoListApps(params) {
               }
             })
             .map((todo) => (
-              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-50 mx-auto">
-                <div className="d-flex align-items-center">
-                  <input className="inputchek" type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
+              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-100">
+                <div className="d-flex align-items-center flex-grow-1">
+                  <input className="inputchek me-2" type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
 
                   {editTodoId === todo.id ? (
-                    <div className="d-flex align-items-center">
-                      <input className="" type="text" value={editTodoText} onChange={handleEditInputChange} />
+                    <div className="d-flex align-items-center flex-grow-1">
+                      <input className="form-control me-2" type="text" value={editTodoText} onChange={handleEditInputChange} />
                       <Button variant="primary" onClick={handleSaveEdit}>
                         Save
                       </Button>
                     </div>
                   ) : (
-                    <div className="d-flex align-items-center">
-                      <span style={{ textDecoration: todo.completed ? "line-through" : "none" }}>{todo.text}</span>
+                    <div className="d-flex align-items-center flex-grow-1">
+                      <span className={todo.completed ? "text-decoration-line-through me-2" : "me-2"}>{todo.text}</span>
                     </div>
                   )}
                 </div>
