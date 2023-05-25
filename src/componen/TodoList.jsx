@@ -73,8 +73,8 @@ function TodoListApps(params) {
   };
   return (
     <>
-      <div className="fs-2 text-center mt-5 fw-bold mb-5 "> What's the plan for today</div>
-      <Container className=" w-50 border-5  mt-5">
+      <div className="fs-1 text-center mt-5 fw-bold mb-5 "> What's the plan for today</div>
+      <Container className=" border-5  mt-5">
         <Row className="justify-content-center">
           <Col xs={12} sm={8} md={6} className="d-flex justify-content-center">
             <Form.Control type="text" value={newTodo} onChange={handleInputChange} placeholder="Whaat Todo..." />
@@ -110,7 +110,7 @@ function TodoListApps(params) {
               }
             })
             .map((todo) => (
-              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 ">
+              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-50 mx-auto">
                 <div className="d-flex align-items-center">
                   <input className="inputchek" type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
 
