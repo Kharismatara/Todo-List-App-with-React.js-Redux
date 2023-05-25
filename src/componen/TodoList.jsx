@@ -110,7 +110,7 @@ function TodoListApps(params) {
               }
             })
             .map((todo) => (
-              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-100">
+              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-50 mx-auto">
                 <div className="d-flex align-items-center flex-grow-1">
                   <input className="inputchek me-2" type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
 
