@@ -127,7 +127,7 @@ function TodoListApps(params) {
                     </div>
                   )}
                 </div>
-                <div className="ms-auto">
+                <div className="d-flex flex-wrap justify-content-center">
                   <Button variant="link" onClick={() => handleEditTodo(todo)}>
                     <PencilSquare size={30} />
                   </Button>
