@@ -112,16 +112,9 @@ function TodoListApps(params) {
             .map((todo) => (
               <ListGroup.Item
                 key={todo.id}
-                className="d-flex align-items-center mt-5 fs-3 mx-auto"
+                className="d-flex align-items-center mt-5 fs-4 mx-auto"
                 style={{
-                  maxWidth: "50%",
-                  minWidth: "20%",
-                  width: "100%",
-                  boxSizing: "border-box",
-                  "@media (max-width: 300px)": {
-                    maxWidth: "100%",
-                    minWidth: "0%",
-                  },
+                  width: "50%",
                 }}
               >
                 <div className="d-flex align-items-center flex-grow-1">
@@ -142,10 +135,10 @@ function TodoListApps(params) {
                 </div>
                 <div className="d-flex flex-wrap justify-content-center">
                   <Button variant="link" onClick={() => handleEditTodo(todo)}>
-                    <PencilSquare size={25} />
+                    <PencilSquare size={20} />
                   </Button>
                   <Button variant="link" onClick={() => handleDeleteTodo(todo.id)}>
-                    <Trash size={25} />
+                    <Trash size={20} />
                   </Button>
                 </div>
               </ListGroup.Item>
