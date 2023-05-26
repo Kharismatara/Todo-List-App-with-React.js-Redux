@@ -118,7 +118,7 @@ function TodoListApps(params) {
                   minWidth: "20%",
                   width: "100%",
                   boxSizing: "border-box",
-                  "@media (max-width: 768px)": {
+                  "@media (max-width: 300px)": {
                     maxWidth: "100%",
                     minWidth: "0%",
                   },
