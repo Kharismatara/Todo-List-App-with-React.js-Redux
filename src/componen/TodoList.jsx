@@ -110,7 +110,20 @@ function TodoListApps(params) {
               }
             })
             .map((todo) => (
-              <ListGroup.Item key={todo.id} className="d-flex align-items-center mt-5 fs-3 w-50 mx-auto">
+              <ListGroup.Item
+                key={todo.id}
+                className="d-flex align-items-center mt-5 fs-3 mx-auto"
+                style={{
+                  maxWidth: "50%",
+                  minWidth: "20%",
+                  width: "100%",
+                  boxSizing: "border-box",
+                  "@media (max-width: 768px)": {
+                    maxWidth: "100%",
+                    minWidth: "0%",
+                  },
+                }}
+              >
                 <div className="d-flex align-items-center flex-grow-1">
                   <input className="inputchek me-2" type="checkbox" checked={todo.completed} onChange={() => handleToggleTodo(todo.id)} />
 
@@ -129,10 +142,10 @@ function TodoListApps(params) {
                 </div>
                 <div className="d-flex flex-wrap justify-content-center">
                   <Button variant="link" onClick={() => handleEditTodo(todo)}>
-                    <PencilSquare size={30} />
+                    <PencilSquare size={25} />
                   </Button>
                   <Button variant="link" onClick={() => handleDeleteTodo(todo.id)}>
-                    <Trash size={30} />
+                    <Trash size={25} />
                   </Button>
                 </div>
               </ListGroup.Item>
